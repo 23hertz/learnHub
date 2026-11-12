@@ -7,6 +7,7 @@
 body {
     width: 100%;
     min-height: 100vh;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 .container {
@@ -124,18 +125,20 @@ nav ul li a:hover
 .main-page
 {
     margin-top: 5px;
-    background-color: yellow;
     height: auto;
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    gap: 10px;
 }
+
 .vidContainer
 {
-    max-width: 300px;
+    max-width: 350px;
     height: auto;
     padding: 5px;
     display: flex;
     flex-direction:column;
-    border: 1px solid #000;
-    background-color: blue;
+    flex-wrap: wrap; 
 }
 
 .vidContainer img
@@ -150,12 +153,30 @@ nav ul li a:hover
 
 .vidContainer p
 {
-    font-size: 0.8em;
-    font-weight:700;
+    font-size: 1em;
+    font-weight:650;
     margin-top: 10px;
-    font-family: Arial, Helvetica, sans-serif;
 }
 
+.vidContainer .videoDetails
+{
+    display: flex;
+    margin-top: 10px;
+    gap: 12px;
+}
+
+.videoDetails a
+{
+    text-decoration: none;
+    color:#000;
+}
+
+.videoDetails .fa-play
+{
+    font-size: 10px;
+    text-decoration: none;
+    color: #f0a7a7;
+}
 
 @media (min-width: 768px) {
 
