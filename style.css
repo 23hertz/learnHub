@@ -39,14 +39,18 @@ header img {
 
 #first-search button
 {
-    position: relative;
+     width: 50px;
+    flex-shrink: 0;
+    border: none;
+    border-radius: 0 20px 20px 0;
+    cursor: pointer;
 }
 
 .fa-search {
-    position: absolute;
-    right: 50%;
-    top: 50%;
-    transform:translate(-50%, -50% );
+    /* position: absolute;
+    right: 2%;
+    top: 50%; */
+    transform:translate(-210%, 30% );
     pointer-events: none;
 }
 
@@ -96,12 +100,11 @@ nav ul
     justify-content: center;
     gap: 10px;
     width: 100%;
-    padding: 10px;
+    list-style-type: none;
 }
 
 nav ul li
 {
-    display: block;
     padding: 0;
 }
 
@@ -127,38 +130,44 @@ nav ul li a:hover
     margin-top: 5px;
     height: auto;
     display: grid;
-    grid-template-columns: auto auto auto auto;
-    gap: 10px;
+    grid-template-columns:1fr;
+    gap: 16px;
 }
 
-.vidContainer
+.video-card
 {
-    max-width: 350px;
-    height: auto;
     padding: 5px;
     display: flex;
     flex-direction:column;
     flex-wrap: wrap; 
+    margin: auto;
+    cursor: pointer;
+    border: 1px solid transparent
 }
 
-.vidContainer img
+.video-card:hover
 {
-    border-top-left-radius: 12px;
-    border-top-right-radius: 12px;
+    border-color: #ff7;
+}
+
+.video-card img
+{
+    border-radius: 12px;
     width:100%;
+    aspect-ratio: 16/9;
     margin: auto;
-    height: 150px;
+    height: 180px;
     object-fit: cover;
 }
 
-.vidContainer p
+.video-card h3
 {
-    font-size: 1em;
-    font-weight:650;
+    font-size: 1rem;
+    font-weight:600;
     margin-top: 10px;
 }
 
-.vidContainer .videoDetails
+.video-card .videoDetails
 {
     display: flex;
     margin-top: 10px;
@@ -182,27 +191,20 @@ nav ul li a:hover
 
     header {
         flex-direction: row;
+        flex-wrap: wrap;
         align-items: center;
-        justify-content: space-between;
+    
     }
 
     #first-search {
         width: 350px;
     }
-
-    #second-search {
-        width: 200px;
-    }
-
-    nav ul
-    {
-        justify-content: space-around;
-    }
-
-     nav ul li
-    {
-    padding:0;
-    } 
+    .main-page
+{
+    display: grid;
+    grid-template-columns:repeat(2, minmax(0, 1fr));
+    gap: 10px;
+}
 
 }
 
@@ -218,4 +220,17 @@ nav ul li a:hover
         width: 250px;
     }
 
+  .main-page  {
+    display: grid;
+    grid-template-columns:repeat(3, minmax(0, 1fr));
+    gap: 10px;
+}
+
+}
+
+@media (min-width: 1280px) {
+
+    .main-page {
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+    }
 }
