@@ -187,10 +187,18 @@ nav ul li a:hover
     color: #f0a7a7;
 }
 
+footer
+{
+    text-align: center;
+    font-size: 14px;
+    font-weight: 400;
+}
+
 @media (min-width: 768px) {
 
     header {
         flex-direction: row;
+        justify-content: space-between;
         flex-wrap: wrap;
         align-items: center;
     
@@ -220,6 +228,15 @@ nav ul li a:hover
         width: 250px;
     }
 
+    header {
+        flex-direction: row;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        align-items: center;
+    
+    }
+
+    
   .main-page  {
     display: grid;
     grid-template-columns:repeat(3, minmax(0, 1fr));
